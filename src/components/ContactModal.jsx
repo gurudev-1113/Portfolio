@@ -14,9 +14,10 @@ const ContactModal = ({ isOpen, onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
-    const SERVICE_ID = 'service_goxh23r';
-    const TEMPLATE_ID = 'template_3tr7e74';
-    const PUBLIC_KEY = 'zR6SkvEaBHt3wsLjO';
+    
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     try {
       const templateParams = {
