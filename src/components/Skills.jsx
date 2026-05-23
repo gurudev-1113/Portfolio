@@ -21,7 +21,7 @@ const Skills = () => {
     { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
     { name: 'Flask', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg' },
     { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
-    { name: 'NVIDIA', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' }, 
+    { name: 'NVIDIA', icon: 'https://1000logos.net/wp-content/uploads/2017/05/Color-NVIDIA-Logo.jpg' }, 
   ];
 
   return (

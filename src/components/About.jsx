@@ -15,7 +15,7 @@ const About = () => {
 
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-5 gap-16 items-start">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -24,8 +24,8 @@ const About = () => {
           >
             <div className="space-y-8 text-tertiary text-lg md:text-xl leading-[1.8] text-justify">
               <p>
-                I am a dedicated <span className="text-secondary font-black underline decoration-2 underline-offset-4">Computer Science student</span> with a profound passion for Artificial Intelligence, 
-                Machine Learning, and Full-Stack Development.
+                I am a dedicated <span className="text-secondary font-black underline decoration-2 underline-offset-4">Computer Science student</span> with a profound passion for Artificial Intelligence,
+                Machine Learning, Data Science and Full-Stack Development.
               </p>
               <p>
                 My journey in technology is driven by a deep-seated curiosity to understand how data can be architected and transformed into actionable insights. I thrive on the challenge of bridging the gap between complex theoretical models and high-performance, real-world applications.

@@ -6,7 +6,7 @@ const Education = () => {
   const educationData = [
     {
       institution: 'Alva\'s Institute of Engineering and Technology',
-      degree: 'Bachelor of Engineering (B.E.) in CSE (Data Science)',
+      degree: 'B.E in CSE (Data Science)',
       period: '2023 – Present',
       description: 'Currently pursuing an engineering degree with a specialization in Data Science, focusing on advanced AI, ML algorithms, and software architecture.',
     },
@@ -14,7 +14,7 @@ const Education = () => {
       institution: 'Alva\'s PU College',
       degree: 'Pre-University Education',
       period: '2021 – 2023',
-      description: 'Completed Pre-University studies with a primary focus on Mathematics, Physics, and Chemistry (PCMC).',
+      description: 'Completed Pre-University studies with a primary focus on Mathematics, Physics, and Chemistry (PCMB).',
     },
     {
       institution: 'R.N.S Vidyaniketan School',
