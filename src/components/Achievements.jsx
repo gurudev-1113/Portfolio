@@ -70,7 +70,7 @@ const Achievements = () => {
     <section id="achievements" className="section-padding overflow-hidden bg-white">
       <div className="flex items-center gap-6 mb-16">
         <h2 className="text-2xl md:text-4xl font-black text-black tracking-tighter uppercase font-outfit">
-          <span className="text-secondary font-mono text-xl mr-4 underline decoration-4 underline-offset-8">05.</span>
+          <span className="text-secondary font-mono text-xl mr-4 underline decoration-4 underline-offset-8">06.</span>
           Achievements & Hackathons
         </h2>
         <div className="h-[4px] bg-slate-100 flex-grow rounded-full"></div>

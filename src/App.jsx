@@ -17,7 +17,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   return (
-    <div className="bg-professional min-h-screen">
+    <div className="bg-white min-h-screen">
       <AnimatePresence mode="wait">
         {loading && <Preloader onComplete={() => setLoading(false)} />}
       </AnimatePresence>
@@ -29,10 +29,10 @@ function App() {
           <main>
             <Hero />
             <About />
+            <Experience />
             <Education />
             <Skills />
             <Projects />
-            <Experience />
             <Achievements />
             <Contact />
           </main>

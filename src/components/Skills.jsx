@@ -7,7 +7,7 @@ const Skills = () => {
     { name: 'C++', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' },
     { name: 'TensorFlow', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg' },
     { name: 'PyTorch', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg' },
-    { name: 'Scikit-Learn', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg' },
+    { name: 'Scikit-Learn', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg' },
     { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
     { name: 'MySQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
     { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
@@ -28,7 +28,7 @@ const Skills = () => {
     <section id="skills" className="section-padding overflow-hidden">
       <div className="flex items-center gap-6 mb-16">
         <h2 className="text-2xl md:text-4xl font-black text-black tracking-tighter uppercase font-outfit">
-          <span className="text-secondary font-mono text-xl mr-4 underline decoration-4 underline-offset-8">03.</span>
+          <span className="text-secondary font-mono text-xl mr-4 underline decoration-4 underline-offset-8">04.</span>
           Tech & Skills
         </h2>
         <div className="h-[4px] bg-slate-100 flex-grow rounded-full"></div>

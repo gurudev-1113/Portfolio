@@ -68,7 +68,7 @@ const Preloader = ({ onComplete }) => {
           transition={{ duration: 2, repeat: Infinity }}
           className="mt-8 text-black font-black uppercase tracking-widest text-sm"
         >
-          Training intelligent systems…
+          LOADING...
         </motion.p>
       </div>
     </motion.div>

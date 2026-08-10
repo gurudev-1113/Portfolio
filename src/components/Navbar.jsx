@@ -59,7 +59,7 @@ const Navbar = () => {
               </motion.a>
             ))}
             <motion.a
-              href="/resume.pdf"
+              href="/Gurudev_Resume.pdf"
               download
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -98,7 +98,7 @@ const Navbar = () => {
                     {link.name}
                   </a>
                 ))}
-                <a href="/resume.pdf" download className="bg-black text-white font-black py-5 px-12 rounded-xl shadow-xl w-[80%] text-center flex justify-center items-center gap-3 uppercase tracking-widest">
+                <a href="/Gurudev_Resume.pdf" download className="bg-black text-white font-black py-5 px-12 rounded-xl shadow-xl w-[80%] text-center flex justify-center items-center gap-3 uppercase tracking-widest">
                   <Download size={24} /> Resume
                 </a>
               </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Users, Cpu, ShieldCheck, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Users, Cpu, ShieldCheck, ChevronLeft, ChevronRight, Briefcase } from 'lucide-react';
 
 import p0 from '../assets/p0.png';
 import p1 from '../assets/p1.png';
@@ -33,6 +33,13 @@ const Experience = () => {
       description: 'Coordinated sessions for BHARAT Scouts and Guides on AI concepts, prompt engineering, and robotics on NVIDIA Jetson platforms.',
       icon: <Users size={20} />,
     },
+    {
+  title: 'CSE Intern',
+  organization: 'Posspole Pvt. Ltd.',
+  period: '2026 - Present',
+  description: 'Working as a CSE Intern at Posspole Pvt. Ltd., contributing to software development projects, collaborating with the team on coding tasks, and gaining practical experience in real-world applications.',
+  icon: <Briefcase size={20} />,
+},
   ];
 
   const galleryImages = [p0, p1, p2, p3, p4, p5, p6];
@@ -50,7 +57,7 @@ const Experience = () => {
     <section id="experience" className="section-padding">
       <div className="flex items-center gap-6 mb-16">
         <h2 className="text-2xl md:text-4xl font-black text-black tracking-tighter uppercase font-outfit">
-          <span className="text-secondary font-mono text-xl mr-4 underline decoration-4 underline-offset-8">04.</span>
+          <span className="text-secondary font-mono text-xl mr-4 underline decoration-4 underline-offset-8">02.</span>
           Professional Experience
         </h2>
         <div className="h-[4px] bg-slate-100 flex-grow rounded-full"></div>

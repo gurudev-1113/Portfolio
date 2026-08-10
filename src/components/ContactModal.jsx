@@ -1,51 +1,49 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Send, Phone, Mail, MessageSquare, CheckCircle2, AlertCircle } from 'lucide-react';
-import emailjs from '@emailjs/browser';
+import { X, Send, Phone, Mail, User, MessageSquare, CheckCircle2, AlertCircle } from 'lucide-react';
 
 const ContactModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
+    name: '',
     email: '',
     phone: '',
     message: ''
   });
   const [status, setStatus] = useState('idle');
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     setStatus('sending');
-    
-    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    const data = new FormData();
+    data.append("access_key", "f904e9d6-9038-4340-8e6e-27134e8f72a6");
+    data.append("name", formData.name);
+    data.append("email", formData.email);
+    data.append("phone", formData.phone);
+    data.append("message", formData.message);
+    data.append("subject", `New Portfolio Contact from ${formData.name}`);
+    data.append("replyto", formData.email);
 
     try {
-      const templateParams = {
-        subject: `New message from ${formData.email}`,
-        from_name: formData.email, 
-        from_email: formData.email,
-        reply_to: formData.email,
-        phone_number: formData.phone,
-        message: formData.message,
-      };
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: data
+      });
 
-      await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        templateParams,
-        PUBLIC_KEY
-      );
+      const result = await response.json();
 
-      setStatus('success');
-      setFormData({ email: '', phone: '', message: '' });
-
-
-      setTimeout(() => {
-        onClose();
-        setStatus('idle');
-      }, 3000);
+      if (result.success) {
+        setStatus('success');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        setTimeout(() => {
+          onClose();
+          setStatus('idle');
+        }, 3000);
+      } else {
+        throw new Error(result.message || 'Submission failed');
+      }
     } catch (error) {
-      console.error('EmailJS Error:', error);
+      console.error('Web3Forms Error:', error);
       setStatus('error');
       setTimeout(() => setStatus('idle'), 5000);
     }
@@ -97,6 +95,21 @@ const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
                   <label className="flex items-center gap-2 text-sm font-black uppercase tracking-widest text-black">
+                    <User size={16} className="text-secondary" /> Your Name
+                  </label>
+                  <input
+                    required
+                    type="text"
+                    disabled={status === 'sending'}
+                    className="w-full px-6 py-4 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-secondary focus:bg-white outline-none transition-all font-bold text-black disabled:opacity-50"
+                    placeholder="Your full name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="flex items-center gap-2 text-sm font-black uppercase tracking-widest text-black">
                     <Mail size={16} className="text-secondary" /> Email Address
                   </label>
                   <input
@@ -115,7 +128,7 @@ const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
                     <Phone size={16} className="text-secondary" /> Phone Number
                   </label>
                   <input
-                    required
+
                     type="tel"
                     disabled={status === 'sending'}
                     className="w-full px-6 py-4 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-secondary focus:bg-white outline-none transition-all font-bold text-black disabled:opacity-50"

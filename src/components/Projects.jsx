@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Folder, Sprout } from 'lucide-react';
+import { Github, ExternalLink, Folder } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -43,7 +43,7 @@ const Projects = () => {
     <section id="projects" className="section-padding">
       <div className="flex items-center gap-6 mb-16">
         <h2 className="text-2xl md:text-4xl font-black text-black tracking-tighter uppercase font-outfit">
-          <span className="text-secondary font-mono text-xl mr-4 underline decoration-4 underline-offset-8">04.</span>
+          <span className="text-secondary font-mono text-xl mr-4 underline decoration-4 underline-offset-8">05.</span>
           My Projects
         </h2>
         <div className="h-[4px] bg-slate-100 flex-grow rounded-full"></div>
