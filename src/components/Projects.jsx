@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Folder } from 'lucide-react';
+import { Github, ExternalLink, Sprout, Cpu, CloudSun, HeartPulse, PhoneCall, BarChart3 } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -10,7 +10,7 @@ const Projects = () => {
       tech: ['AI', 'IoT', 'CV', 'Edge Computing'],
       github: 'https://github.com/gurudev-1113',
       demo: '#',
-      icon: <Folder size={32} className="text-black" />,
+      icon: <Sprout size={32} className="text-black group-hover:text-secondary transition-colors" />,
       active: true
     },
     {
@@ -19,7 +19,7 @@ const Projects = () => {
       tech: ['Python', 'TensorFlow', 'Jetson Nano'],
       github: 'https://github.com/gurudev-1113',
       demo: '#',
-      icon: <Folder size={32} className="text-black" />
+      icon: <Cpu size={32} className="text-black group-hover:text-secondary transition-colors" />
     },
     {
       title: 'Weather Forecasting Web Application',
@@ -27,7 +27,7 @@ const Projects = () => {
       tech: ['Flask', 'OpenWeather API', 'Chart.js'],
       github: 'https://github.com/gurudev-1113',
       demo: '#',
-      icon: <Folder size={32} className="text-black" />
+      icon: <CloudSun size={32} className="text-black group-hover:text-secondary transition-colors" />
     },
     {
       title: 'Health Risk Management System',
@@ -35,7 +35,23 @@ const Projects = () => {
       tech: ['Python', 'Scikit-learn', 'Pandas'],
       github: 'https://github.com/gurudev-1113',
       demo: '#',
-      icon: <Folder size={32} className="text-black" />
+      icon: <HeartPulse size={32} className="text-black group-hover:text-secondary transition-colors" />
+    },
+    {
+      title: 'Telecom Customer Churn Prediction',
+      description: 'End-to-end machine learning system that predicts customer churn using customer behavior and account data, with model comparison, MLflow experiment tracking, FastAPI deployment, Docker, and AWS integration.',
+      tech: ['Python', 'Scikit-learn', 'XGBoost', 'MLflow', 'FastAPI', 'Docker'],
+      github: 'https://github.com/gurudev-1113/Telicom-Customer-Churn-Analysis',
+      demo: 'https://telicom-customer-churn-analysis1.onrender.com',
+      icon: <PhoneCall size={32} className="text-black group-hover:text-secondary transition-colors" />
+    },
+    {
+      title: 'DataMind AI',
+      description: 'AI-powered data analytics platform that transforms raw datasets into actionable insights using natural language queries, interactive visualizations, data processing, and machine learning.',
+      tech: ['React', 'Flask', 'Pandas', 'NumPy', 'Scikit-learn'],
+      github: 'https://github.com/gurudev-1113/Data-Analysis-AI',
+      demo: '#',
+      icon: <BarChart3 size={32} className="text-black group-hover:text-secondary transition-colors" />
     },
   ];
 
@@ -64,7 +80,7 @@ const Projects = () => {
             className={`group bg-white flex flex-col p-10 rounded-[2.5rem] h-full border-4 border-black shadow-[12px_12px_0px_0px_rgba(2,132,199,0.1)] hover:shadow-[15px_15px_0px_0px_rgba(2,132,199,0.2)] transition-all duration-300 ${project.active ? 'border-secondary shadow-[12px_12px_0px_0px_rgba(2,132,199,0.2)]' : ''}`}
           >
             <div className="flex justify-between items-center mb-8">
-              <div className={`p-4 bg-slate-50 rounded-2xl border-2 ${project.active ? 'border-secondary' : 'border-black'}`}>
+              <div className={`p-4 bg-slate-50 rounded-2xl border-2 transition-colors ${project.active ? 'border-secondary' : 'border-black group-hover:border-secondary'}`}>
                 {project.icon}
               </div>
               {project.active && (
@@ -73,9 +89,26 @@ const Projects = () => {
                 </span>
               )}
               <div className="flex gap-4">
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-3 bg-white border-2 border-black rounded-xl hover:bg-secondary hover:text-white transition-all shadow-md">
+                <a 
+                  href={project.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="p-3 bg-white border-2 border-black rounded-xl hover:bg-secondary hover:text-white transition-all shadow-md"
+                  aria-label="GitHub Repository"
+                >
                   <Github size={20} />
                 </a>
+                {project.demo && project.demo !== '#' && (
+                  <a 
+                    href={project.demo} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="p-3 bg-white border-2 border-black rounded-xl hover:bg-secondary hover:text-white transition-all shadow-md"
+                    aria-label="Live Demo"
+                  >
+                    <ExternalLink size={20} />
+                  </a>
+                )}
               </div>
             </div>
 

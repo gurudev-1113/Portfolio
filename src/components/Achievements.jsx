@@ -77,7 +77,7 @@ const Achievements = () => {
       </div>
 
       <div className="relative max-w-6xl mx-auto">
-        <div className="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-[2rem] border-4 border-black shadow-[20px_20px_0px_0px_rgba(2,132,199,0.1)] bg-white">
+        <div className="relative min-h-[720px] sm:min-h-[640px] md:min-h-[540px] lg:min-h-[480px] overflow-hidden rounded-[2rem] border-4 border-black shadow-[20px_20px_0px_0px_rgba(2,132,199,0.1)] bg-white">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -85,9 +85,9 @@ const Achievements = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 1.05 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="absolute inset-0 flex flex-col md:flex-row p-4 md:p-8"
+              className="absolute inset-0 flex flex-col md:flex-row p-6 md:p-8 gap-6 md:gap-0"
             >
-              <div className="w-full md:w-1/2 h-full relative p-4 bg-slate-50 rounded-2xl border-2 border-dashed border-slate-200 flex items-center justify-center overflow-hidden group">
+              <div className="w-full md:w-1/2 h-48 sm:h-64 md:h-full relative p-4 bg-slate-50 rounded-2xl border-2 border-dashed border-slate-200 flex items-center justify-center overflow-hidden group">
                 <img 
                   src={allAchievements[currentIndex].image} 
                   alt={allAchievements[currentIndex].title}
@@ -96,41 +96,41 @@ const Achievements = () => {
                     e.target.src = 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop';
                   }}
                 />
-                <div className="absolute top-6 left-6 bg-black text-white px-4 py-2 rounded-lg font-black text-xs uppercase tracking-widest shadow-xl">
+                <div className="absolute top-4 left-4 bg-black text-white px-3 py-1.5 rounded-lg font-black text-xs uppercase tracking-widest shadow-xl">
                   {allAchievements[currentIndex].type}
                 </div>
               </div>
               
-              <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="p-4 bg-secondary text-white rounded-2xl shadow-lg">
-                    <Trophy size={32} />
+              <div className="w-full md:w-1/2 px-2 py-4 md:p-8 flex flex-col justify-center">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="p-3 bg-secondary text-white rounded-2xl shadow-lg">
+                    <Trophy size={24} />
                   </div>
                   <div className="h-[2px] w-12 bg-slate-100"></div>
                 </div>
                 
-                <h3 className="text-2xl md:text-4xl font-black text-black mb-6 tracking-tighter leading-tight uppercase font-outfit">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-black mb-4 tracking-tighter leading-tight uppercase font-outfit">
                   {allAchievements[currentIndex].title}
                 </h3>
 
-                <div className="space-y-4 mb-8">
+                <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-3">
-                    <Users size={20} className="text-secondary" />
-                    <p className="text-secondary font-black text-lg md:text-xl tracking-tight">{allAchievements[currentIndex].issuer}</p>
+                    <Users size={18} className="text-secondary" />
+                    <p className="text-secondary font-black text-base md:text-lg tracking-tight">{allAchievements[currentIndex].issuer}</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Award size={20} className="text-black" />
-                    <p className="text-black font-bold text-base md:text-lg italic">{allAchievements[currentIndex].date}</p>
+                    <Award size={18} className="text-black" />
+                    <p className="text-black font-bold text-sm md:text-base italic">{allAchievements[currentIndex].date}</p>
                   </div>
                 </div>
 
-                <div className="mb-10">
-                  <p className="text-black text-base md:text-lg leading-relaxed font-medium bg-slate-50 p-6 rounded-2xl border-l-4 border-secondary">
+                <div className="mb-6">
+                  <p className="text-black text-sm md:text-base leading-relaxed font-medium bg-slate-50 p-4 md:p-6 rounded-2xl border-l-4 border-secondary">
                     {allAchievements[currentIndex].description}
                   </p>
                 </div>
 
-                <div className="mt-auto pt-8 border-t border-slate-100 flex items-center justify-between">
+                <div className="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
                   <div className="flex gap-2">
                     {allAchievements.map((_, idx) => (
                       <button
@@ -142,8 +142,8 @@ const Achievements = () => {
                     ))}
                   </div>
                   <div className="flex flex-col items-end">
-                    <p className="text-slate-100 font-black text-5xl italic">0{currentIndex + 1}</p>
-                    <Star className="text-secondary mt-2 fill-secondary" size={24} />
+                    <p className="text-slate-100 font-black text-4xl md:text-5xl italic">0{currentIndex + 1}</p>
+                    <Star className="text-secondary mt-1 fill-secondary" size={20} />
                   </div>
                 </div>
               </div>
