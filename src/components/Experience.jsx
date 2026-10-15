@@ -13,6 +13,13 @@ import p6 from '../assets/p6.png';
 const Experience = () => {
   const experiences = [
     {
+      title: 'CSE Intern',
+      organization: 'Posspole Pvt. Ltd.',
+      period: '2026 - Present',
+      description: 'Working as a CSE Intern at Posspole Pvt. Ltd., contributing to software development projects, collaborating with the team on coding tasks, and gaining practical experience in real-world applications.',
+      icon: <Briefcase size={20} />,
+    },
+    {
       title: 'NVIDIA Lab Coordinator',
       organization: 'AIET',
       period: '2024 – Present',
@@ -22,24 +29,17 @@ const Experience = () => {
     {
       title: 'NVIDIA Facilitator',
       organization: 'AIET / Community',
-      period: '2024 – Present',
+      period: '2024 - Present',
       description: 'Promoted learning initiatives in Robotics, Artificial Intelligence, and Prompt Engineering through workshops, mentoring sessions, and technical guidance. Helped students understand modern AI tools, generative AI concepts, and robotics applications while encouraging innovation.',
       icon: <ShieldCheck size={20} />,
     },
     {
-      title: 'AI & Data Science Workshop.',
+      title: 'AI & Data Science Workshop',
       organization: "Alva's Institute of Engineering",
       period: '2025',
       description: 'Coordinated sessions for BHARAT Scouts and Guides on AI concepts, prompt engineering, and robotics on NVIDIA Jetson platforms.',
       icon: <Users size={20} />,
     },
-    {
-  title: 'CSE Intern',
-  organization: 'Posspole Pvt. Ltd.',
-  period: '2026 - Present',
-  description: 'Working as a CSE Intern at Posspole Pvt. Ltd., contributing to software development projects, collaborating with the team on coding tasks, and gaining practical experience in real-world applications.',
-  icon: <Briefcase size={20} />,
-},
   ];
 
   const galleryImages = [p0, p1, p2, p3, p4, p5, p6];

@@ -85,9 +85,9 @@ const Achievements = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 1.05 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="absolute inset-0 flex flex-col md:flex-row p-6 md:p-8 gap-6 md:gap-0"
+              className="absolute inset-0 flex h-full flex-col md:flex-row items-stretch p-4 sm:p-6 md:p-8 gap-6 md:gap-8"
             >
-              <div className="w-full md:w-1/2 h-48 sm:h-64 md:h-full relative p-4 bg-slate-50 rounded-2xl border-2 border-dashed border-slate-200 flex items-center justify-center overflow-hidden group">
+              <div className="w-full md:w-1/2 h-48 sm:h-64 md:h-full min-h-0 relative p-4 bg-slate-50 rounded-2xl border-2 border-dashed border-slate-200 flex items-center justify-center overflow-hidden group">
                 <img 
                   src={allAchievements[currentIndex].image} 
                   alt={allAchievements[currentIndex].title}
@@ -101,15 +101,15 @@ const Achievements = () => {
                 </div>
               </div>
               
-              <div className="w-full md:w-1/2 px-2 py-4 md:p-8 flex flex-col justify-center">
-                <div className="flex items-center gap-4 mb-4">
+              <div className="w-full md:w-1/2 h-full min-h-0 px-2 py-2 md:px-0 md:py-2 flex flex-col justify-start">
+                <div className="flex items-center gap-4 mb-6">
                   <div className="p-3 bg-secondary text-white rounded-2xl shadow-lg">
                     <Trophy size={24} />
                   </div>
                   <div className="h-[2px] w-12 bg-slate-100"></div>
                 </div>
                 
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-black mb-4 tracking-tighter leading-tight uppercase font-outfit">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-black mb-5 tracking-tighter leading-tight uppercase font-outfit">
                   {allAchievements[currentIndex].title}
                 </h3>
 
@@ -124,7 +124,7 @@ const Achievements = () => {
                   </div>
                 </div>
 
-                <div className="mb-6">
+                <div className="mb-0">
                   <p className="text-black text-sm md:text-base leading-relaxed font-medium bg-slate-50 p-4 md:p-6 rounded-2xl border-l-4 border-secondary">
                     {allAchievements[currentIndex].description}
                   </p>
